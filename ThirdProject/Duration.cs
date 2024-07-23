@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ThirdProject
 {
@@ -171,5 +173,14 @@ namespace ThirdProject
 
             else return false;
         }
+        public static explicit operator DateTime(Duration c)
+        {
+
+
+            return DateTime.ParseExact($" {c.Hours}:{c.Minutes}:{c.Seconds}", "HH:mm:ss", CultureInfo.InvariantCulture); }
+
+               
+
+        
     }
 }
