@@ -28,9 +28,14 @@ namespace ThirdProject
             Console.WriteLine(D3.ToString());
             //Output: Minutes: 11, Seconds: 6
             //4.Implement All required Operators overloading to enable this Code:
-            //●	D3 = D1 + D2
-            //●	D3 = D1 + 7800
-            //●	D3 = 666 + D3
+            D3 = D1 + D2;
+            Console.WriteLine(D3);
+            D3 = D1 + 7800;
+            Console.WriteLine(D3);
+
+            D3 = 666 + D3;
+            Console.WriteLine(D3);
+
             //●	D3 = ++D1(Increase One Minute)
             //●	D3 = --D2(Decrease One Minute)
             //●	D1 = D1 - D2

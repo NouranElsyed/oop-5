@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,6 +43,10 @@ namespace ThirdProject
 
         }
         // 3.Define All Required Constructors to Produce this output:
+        public Duration()
+        {
+            Hours = 0; Minutes = 0; Seconds = 0;
+        }
         public Duration(int h, int m, int s)
         {
             Hours = h; Minutes = m; Seconds = s;
@@ -56,6 +61,50 @@ namespace ThirdProject
         }
 
         //4.Implement All required Operators overloading to enable this Code:
+        public static Duration operator +(Duration   a, Duration b)
+        {
+            return new Duration()
+            {
+                Hours = a.Hours  + b.Hours,
+                Minutes = a.Minutes + b.Minutes,
+                Seconds = a.Seconds + b.Seconds 
 
+            };
+
+        }
+        public static Duration operator +(Duration a, int num)
+        {
+            Duration b = new Duration(num);
+            return new Duration()
+            {
+                Hours = a.Hours + b.Hours,
+                Minutes = a.Minutes + b.Minutes,
+                Seconds = a.Seconds + b.Seconds
+
+            };
+
+        }
+        public static Duration operator +(int num,Duration a )
+        {
+            Duration b = new Duration(num);
+            return new Duration()
+            {
+                Hours = a.Hours + b.Hours,
+                Minutes = a.Minutes + b.Minutes,
+                Seconds = a.Seconds + b.Seconds
+
+            };
+
+        }
+        public static Duration operator -(Duration a, Duration b)
+        {
+            return new Duration()
+            {
+                Hours = a.Hours - b.Hours,
+                Minutes = a.Minutes - b.Minutes,
+                Seconds = a.Seconds - b.Seconds
+
+            };
+        }
     }
 }
