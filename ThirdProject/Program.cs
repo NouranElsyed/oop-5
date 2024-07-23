@@ -53,7 +53,7 @@ namespace ThirdProject
             Console.WriteLine($"D1 > D2:{D1 > D2}");
             Console.WriteLine($"D1 <= D2: {D1 <= D2}");
             //●	If(D1)
-            //●	DateTime Obj = (DateTime)D1
+            //DateTime Obj = (DateTime)D1;
 
 
 
