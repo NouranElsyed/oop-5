@@ -61,13 +61,13 @@ namespace ThirdProject
         }
 
         //4.Implement All required Operators overloading to enable this Code:
-        public static Duration operator +(Duration   a, Duration b)
+        public static Duration operator +(Duration a, Duration b)
         {
             return new Duration()
             {
-                Hours = a.Hours  + b.Hours,
+                Hours = a.Hours + b.Hours,
                 Minutes = a.Minutes + b.Minutes,
-                Seconds = a.Seconds + b.Seconds 
+                Seconds = a.Seconds + b.Seconds
 
             };
 
@@ -84,7 +84,7 @@ namespace ThirdProject
             };
 
         }
-        public static Duration operator +(int num,Duration a )
+        public static Duration operator +(int num, Duration a)
         {
             Duration b = new Duration(num);
             return new Duration()
@@ -105,6 +105,71 @@ namespace ThirdProject
                 Seconds = a.Seconds - b.Seconds
 
             };
+        }
+        public static Duration operator ++(Duration c)
+        {
+            return new Duration()
+            {
+                Hours = c.Hours,
+                Minutes = c.Minutes + 1,
+                Seconds = c.Seconds
+            };
+        }
+        public static Duration operator --(Duration c)
+        {
+            return new Duration()
+            {
+                Hours = c.Hours,
+                Minutes = c.Minutes - 1,
+                Seconds = c.Seconds
+            };
+        }
+
+        public static bool operator >(Duration a, Duration b)
+        {
+            int num0a = a.Hours * 3600 + a.Minutes * 60 + a.Seconds;
+            int numab = b.Hours * 3600 + b.Minutes * 60 + b.Seconds;
+
+            if (num0a > numab)
+                return true;
+
+            else return false;
+        }
+
+        public static bool operator <(Duration a, Duration b)
+        {
+            int num0a = a.Hours * 3600 + a.Minutes * 60 + a.Seconds;
+            int numab = b.Hours * 3600 + b.Minutes * 60 + b.Seconds;
+
+            if (num0a > numab)
+                return true;
+
+            else return false;
+        }
+
+
+
+        public static bool operator >=(Duration a, Duration b)
+        {
+            int num0a = a.Hours * 3600 + a.Minutes * 60 + a.Seconds;
+            int num0b = b.Hours * 3600 + b.Minutes * 60 + b.Seconds;
+            if (num0a == num0b)
+                return true;
+            if (num0a > num0b)
+                return true;
+
+            else return false;
+        }
+        public static bool operator <=(Duration a, Duration b)
+        {
+            int num0a = a.Hours * 3600 + a.Minutes * 60 + a.Seconds;
+            int num0b = b.Hours * 3600 + b.Minutes * 60 + b.Seconds;
+            if (num0a == num0b)
+                return true;
+            if (num0a < num0b)
+                return true;
+
+            else return false;
         }
     }
 }
