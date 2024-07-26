@@ -1,5 +1,8 @@
 ﻿using oop_5.casting_operator_overloading;
 using oop_5.complex;
+using System.Drawing;
+using oop_5.abstraction;
+using oop_5.Static;
 namespace oop_5
 {
     internal class Program
@@ -56,9 +59,26 @@ namespace oop_5
 
             #endregion
 
+            #region abstract
 
+            //Rectangl rectangle = new Rectangl() { Dim01=10 , Dim02=5};
+            //decimal RecArea = rectangle.CalcArea();
+            //Console.WriteLine($"Area of rectangle = {RecArea}");
+            //Console.WriteLine($"perimeter of rectangle = {rectangle.Perimeter}");
 
+            //Console.WriteLine("===========================================");
+            //Circle circle = new Circle(30);
+            //decimal area = circle.CalcArea();
+            //Console.WriteLine($"area of circle: {area}");
+            //Console.WriteLine($"perimeter of circle = {circle.Perimeter}");
+            #endregion
 
+            //Utility U01 = new Utility(10, 20);
+            //Console.WriteLine($"Cm to inch = {Utility.cmToInch(254)}");
+
+            //Utility U02 = new Utility(100, 200);
+            //Console.WriteLine($"Cm to inch = {Utility.cmToInch(254)}");
+            Console.WriteLine(Utility.CalcCircleArea(5));
 
         }
     }
